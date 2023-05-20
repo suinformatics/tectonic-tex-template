@@ -1,0 +1,46 @@
+{
+    "name": "Tectonic",
+    "build": { "dockerfile": "Dockerfile" },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "latex-workshop.latex.recipe.default": "tectonic",
+                "latex-workshop.latex.autoBuild.run": "onSave",
+                "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/build/index",
+                "latex-workshop.view.pdf.viewer": "tab",
+                "latex-workshop.latex.recipes": [
+                    {
+                        "name": "tectonic",
+                        "tools": [ "tectonic" ]
+                    }
+                ],
+                "latex-workshop.latex.tools": [
+                    {
+                        "name": "tectonic",
+                        "command": "tectonic",
+                        "args": [ "-X", "build" ],
+                        "env": {}
+                     }
+                ],
+                
+                "cSpell.caseSensitive": true,
+                "cSpell.language": "en-GB",
+                "cSpell.diagnosticLevel": "Warning",
+                "cSpell.enableFiletypes": [ "latex" ],
+                "cSpell.enabledLanguageIds": [],
+                
+                "gitlens.showWelcomeOnInstall": false,
+                "gitlens.showWhatsNewAfterUpgrades": false,
+                "gitlens.plusFeatures.enabled": false,
+                "gitlens.telemetry.enabled": false
+            },
+            "extensions": [
+                "James-Yu.latex-workshop",
+                "streetsidesoftware.code-spell-checker",
+                "streetsidesoftware.code-spell-checker-british-english",
+                "ms-vsliveshare.vsliveshare",
+                "eamodio.gitlens"
+            ]
+        }
+    }
+}
